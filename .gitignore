@@ -14,9 +14,11 @@ venv/
 env/
 .env/
 
-# Generated reports
-PROPERTY-*.pdf
-PROPERTY-*.md
+# Generated property reports
+# Tracked by default so Vercel deploys see latest analyses & humans can iterate.
+# Uncomment below to re-ignore (e.g. if running batch screening that produces hundreds).
+# PROPERTY-*.pdf
+# PROPERTY-*.md
 
 # macOS
 .DS_Store
