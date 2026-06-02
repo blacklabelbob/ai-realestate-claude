@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -106,3 +108,83 @@ html {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* ---- Report typography & components ---- */
+.font-display {
+  font-family: "Fraunces", ui-serif, Georgia, "Times New Roman", serif;
+  font-optical-sizing: auto;
+  letter-spacing: -0.015em;
+}
+
+/* Premium cover backdrop: layered radial glows + subtle grain over the gradient */
+.report-cover {
+  position: relative;
+  isolation: isolate;
+}
+.report-cover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    radial-gradient(60% 80% at 85% 0%, rgba(201, 152, 46, 0.22), transparent 60%),
+    radial-gradient(50% 60% at 0% 100%, rgba(45, 138, 78, 0.28), transparent 65%);
+}
+.report-cover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.06;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Schematic "aerial preview" map card (used when no Maps API key is set) */
+.report-mapcard {
+  background:
+    radial-gradient(120% 120% at 70% 20%, #233149 0%, #1a2434 55%, #131b29 100%);
+}
+.report-mapgrid {
+  background-image:
+    linear-gradient(to right, rgba(245, 242, 235, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(245, 242, 235, 0.07) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
+.report-mapdiag {
+  background-image:
+    linear-gradient(115deg, transparent 0%, transparent 46%, rgba(201, 152, 46, 0.16) 47%, rgba(201, 152, 46, 0.16) 49%, transparent 50%),
+    linear-gradient(28deg, transparent 0%, transparent 62%, rgba(245, 242, 235, 0.06) 63%, rgba(245, 242, 235, 0.06) 64%, transparent 65%);
+}
+.report-parcel {
+  animation: report-pulse 2.6s ease-in-out infinite;
+}
+@keyframes report-pulse {
+  0%, 100% { box-shadow: 0 0 0 6px rgba(201, 152, 46, 0.1); }
+  50% { box-shadow: 0 0 0 11px rgba(201, 152, 46, 0.04); }
+}
+
+/* Soft card system for the report body */
+.report-card {
+  border: 1px solid hsl(216 28% 15% / 0.08);
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(26, 35, 50, 0.04), 0 8px 24px -16px rgba(26, 35, 50, 0.18);
+}
+
+/* ---- Print / white-label report styles ---- */
+@media print {
+  /* Hide chrome that shouldn't appear in a printed/white-label report */
+  .no-print { display: none !important; }
+  /* Force the report onto a clean white page */
+  html, body { background: #fff !important; }
+  main { background: #fff !important; }
+  article { max-width: 100% !important; padding: 0 !important; color: #000 !important; }
+  /* Keep tables and cards from splitting awkwardly across pages */
+  table, figure, .avoid-break { break-inside: avoid; page-break-inside: avoid; }
+  h1, h2, h3, h4 { break-after: avoid; }
+  /* Open any collapsed source/methodology blocks so the print is complete */
+  details { display: block !important; }
+  details > summary { display: none !important; }
+  /* The print-only brand header */
+  .print-brand { display: flex !important; }
+}
+.print-brand { display: none; }

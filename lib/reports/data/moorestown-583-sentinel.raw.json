@@ -1,0 +1,143 @@
+{
+  "address": "583 Sentinel Rd, Moorestown, NJ 08057",
+  "price": "$779,900 (last sale Nov 2025)",
+  "date": "May 09, 2026",
+  "overall_score": 59,
+  "property_details": {
+    "beds": "5",
+    "baths": "3",
+    "sqft": "2,817",
+    "year_built": "1981",
+    "lot_size": "Estimated ~0.3 acres",
+    "property_type": "Single Family Residence (Stanwick Glen)"
+  },
+  "categories": {
+    "Value & Comps": {"score": 74, "weight": "25%"},
+    "Income Potential": {"score": 22, "weight": "20%"},
+    "Neighborhood Quality": {"score": 86, "weight": "20%"},
+    "Investment Upside": {"score": 42, "weight": "20%"},
+    "Market Conditions": {"score": 72, "weight": "15%"}
+  },
+  "comps": [
+    {"address": "596 Sentinel Rd", "price": "$999,999", "sqft": "2,710", "price_sqft": "$369", "sold_date": "May 2025", "distance": "0.05 mi"},
+    {"address": "558 Sentinel Rd", "price": "$915,000", "sqft": "3,602", "price_sqft": "$254", "sold_date": "Jan 2025", "distance": "0.1 mi"},
+    {"address": "7 Sycamore Ln", "price": "$1,126,000", "sqft": "3,200", "price_sqft": "$352", "sold_date": "Jul 2025", "distance": "0.4 mi"},
+    {"address": "25 Oriole Way", "price": "$650,000", "sqft": "2,460", "price_sqft": "$264", "sold_date": "Dec 2025", "distance": "0.5 mi"},
+    {"address": "102 Lois Ln", "price": "$600,000", "sqft": "1,920", "price_sqft": "$312", "sold_date": "Feb 2025", "distance": "0.6 mi"}
+  ],
+  "comp_summary": {
+    "avg_price": "$858,200",
+    "avg_price_sqft": "$310/sq ft"
+  },
+  "cashflow": {
+    "items": [
+      {"item": "Gross Rental Income (mod)", "monthly": "$3,800", "annual": "$45,600"},
+      {"item": "Vacancy Loss (7%)", "monthly": "-$266", "annual": "-$3,192"},
+      {"item": "Effective Gross Income", "monthly": "$3,534", "annual": "$42,408"},
+      {"item": "Mortgage P&I (25% dn @ 7%)", "monthly": "-$3,892", "annual": "-$46,704"},
+      {"item": "Property Taxes (NJ 2.81%)", "monthly": "-$1,826", "annual": "-$21,915"},
+      {"item": "Insurance", "monthly": "-$175", "annual": "-$2,100"},
+      {"item": "Maintenance (10%)", "monthly": "-$380", "annual": "-$4,560"},
+      {"item": "Property Mgmt (8%)", "monthly": "-$304", "annual": "-$3,648"},
+      {"item": "CapEx Reserve (5%)", "monthly": "-$190", "annual": "-$2,280"},
+      {"item": "Net Cash Flow", "monthly": "-$3,233", "annual": "-$38,799"}
+    ]
+  },
+  "investment_metrics": {
+    "cap_rate": "1.01%",
+    "cap_rate_status": "NOI $7,905 ÷ price $779,900. NOI = EGI $42,408 − operating expenses $34,503. Far below the 5%+ target — NJ's 2.81% tax destroys yield.",
+    "cash_on_cash": "-19.9%",
+    "coc_status": "Annual pre-tax cash flow −$38,799 ÷ down payment $194,975. Negative — the leveraged position bleeds cash.",
+    "grm": "17.1x",
+    "grm_status": "Price $779,900 ÷ gross annual rent $45,600. High for the area — an appreciation play, not an income play.",
+    "dscr": "0.17",
+    "dscr_status": "NOI $7,905 ÷ annual debt service $46,704. Far below 1.0 — uninsurable as a DSCR loan.",
+    "one_pct": "0.49%",
+    "one_pct_status": "Rent $3,800 ÷ price $779,900 = 0.49% (target ≥1%). Would need ~$7,799/mo to pass.",
+    "breakeven": "117%",
+    "breakeven_status": "Operating expenses + debt service exceed gross rent — cannot break even at full occupancy."
+  },
+  "mortgage": {
+    "purchase_price": "$779,900",
+    "down_payment": "$194,975 (25%)",
+    "loan_amount": "$584,925",
+    "rate": "7.00%",
+    "term": "30-year fixed",
+    "monthly_pi": "$3,892",
+    "monthly_piti": "$5,893"
+  },
+  "neighborhood": {
+    "scores": {
+      "School Rating": 96,
+      "Safety / Crime": 88,
+      "Walkability": 50,
+      "Transit Access": 35,
+      "Dining & Shopping": 75,
+      "Growth Trajectory": 75
+    },
+    "details": [
+      {"factor": "School District", "detail": "Moorestown Twp — Niche A+, #16 NJ", "notes": "Moorestown HS #39 in NJ; all elementaries A+"},
+      {"factor": "Crime Rate", "detail": "56% below national average", "notes": "1 in 786 violent-crime victimization rate"},
+      {"factor": "Walk Score", "detail": "37–66 (block dependent)", "notes": "Car-dependent suburb; no rail station"},
+      {"factor": "Median Income", "detail": "$158,770", "notes": "64% bachelor's+, 81% owner-occupied"},
+      {"factor": "Pop. Growth (5yr)", "detail": "Stable, supply-constrained", "notes": "Only 1% post-2020 construction — built-out"},
+      {"factor": "Median Home Value (ZHVI)", "detail": "$687,748", "notes": "+4–6.5% YoY, trailing 12mo $741,250"}
+    ],
+    "demographics": {
+      "population_growth": "Stable, supply-constrained",
+      "median_age": "43 years",
+      "employment_rate": "Strong — Lockheed Martin Moorestown 4,500-5,200 jobs",
+      "major_employers": "Lockheed Martin, Subaru of America HQ, BMS, J&J, Cooper Health"
+    }
+  },
+  "strategies": [
+    {"strategy": "Buy & Hold (Rental)", "projected_return": "Negative -$38K/yr", "timeframe": "7+ year hold required",
+     "pros": "School demand floor, finite supply, long-term appreciation",
+     "risk": "$160K cumulative cash bleed over 5 years; only viable as cash purchase"},
+    {"strategy": "BRRRR", "projected_return": "Not viable", "timeframe": "N/A",
+     "pros": "None — Moorestown lacks distressed inventory",
+     "risk": "ARV ceiling too close to acquisition cost; turnkey market"},
+    {"strategy": "Fix & Flip", "projected_return": "~$135K LOSS at retail entry", "timeframe": "6+ months",
+     "pros": "Renovated comps trade at $350+/sqft premium",
+     "risk": "Need ≤$580K basis (65-70% of ARV) to make math work"}
+  ],
+  "appreciation_projections": [
+    {"year": "Year 1", "conservative": "$795,000", "moderate": "$811,000", "aggressive": "$827,000"},
+    {"year": "Year 3", "conservative": "$827,000", "moderate": "$876,000", "aggressive": "$929,000"},
+    {"year": "Year 5", "conservative": "$860,000", "moderate": "$946,000", "aggressive": "$1,043,000"},
+    {"year": "Year 10", "conservative": "$925,000", "moderate": "$1,123,000", "aggressive": "$1,355,000"}
+  ],
+  "scenarios": [
+    {"scenario": "Bull Case", "probability": "20%", "return": "+25% to +40% (5yr)",
+     "trigger": "SALT cap stays elevated; mortgage rates fall to 5%; Philly metro relocation surge"},
+    {"scenario": "Base Case", "probability": "55%", "return": "+15% to +25% (5yr)",
+     "trigger": "Steady 3-5% Moorestown appreciation; school demand floor intact"},
+    {"scenario": "Bear Case", "probability": "25%", "return": "-5% to -10% (5yr)",
+     "trigger": "2030 SALT cap cliff repricing; NJ exit migration accelerates; rates stay 7%+"}
+  ],
+  "recommendation": {
+    "signal": "HOLD / WATCH",
+    "summary": "Mixed signals. The home, neighborhood, and macro market are strong; the deal math is brutal as a leveraged investment because of NJ property taxes ($21,915/yr). Best fit is an owner-occupant family who values the #16-NJ school district and plans 7+ year hold, OR an all-cash buyer. Investors at retail entry will bleed $30-45K/yr. Flippers need ≤$580K basis for the math to work. Last sale of $779,900 represents a ~10% discount to FMV mid ($870K), attributable to original 1981 condition needing $75-125K refresh.",
+    "suggested_offer": "Owner-occupant: $800K–$850K. Investor: walk away unless ≤$620K cash.",
+    "action_items": [
+      "Pull MLS NJBL398454 directly to verify condition, lot size, garage, basement, recent updates",
+      "Burlington County parcel pull — verify current assessed value & post-reassessment tax bill",
+      "Reserve $75-125K for 1981 mechanicals (roof, HVAC, windows, kitchen, baths likely all due)",
+      "FEMA flood-zone determination — Pennsauken Creek tributaries nearby",
+      "If owner-occupant: offer $800-850K contingent on inspection. If investor: pass.",
+      "Consult NJ tax attorney on SALT cap 2030 cliff and exit-tax implications"
+    ]
+  },
+  "risk_factors": [
+    {"factor": "NJ Property Tax", "probability": "High", "impact": "High",
+     "notes": "2.81% effective, escalated from 2.76% YoY. $22K today, $26K+ in 5yr. Reassessment risk."},
+    {"factor": "Condition / CapEx", "probability": "High", "impact": "Medium-High",
+     "notes": "1981 build at 45-yr CapEx wall; $75-125K refresh likely needed"},
+    {"factor": "SALT Cap Cliff (2030)", "probability": "Medium-High", "impact": "Medium-High",
+     "notes": "SALT reverts to $10K in 2030 → 3-7% NJ home price repricing risk"},
+    {"factor": "Interest Rate Risk", "probability": "Medium", "impact": "High",
+     "notes": "Investor rates currently 7.5-8.0%, not 7%. Rate drops boost; hikes hurt"},
+    {"factor": "Liquidity / Exit Tax", "probability": "Medium", "impact": "Medium",
+     "notes": "NJ exit withholding 8.97% of gain or 2% of sale price; 38-55 day DOM. Plan 7+ yr hold."}
+  ]
+}

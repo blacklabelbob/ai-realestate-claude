@@ -4,22 +4,44 @@ import Link from "next/link";
 import { Home } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
-const navigation = {
+function FooterLink({ item }: { item: NavItem }) {
+  const className =
+    "text-sm text-cream/60 hover:text-cream transition-colors";
+
+  if (!item.href) {
+    return <span className="text-sm text-cream/30">{item.name}</span>;
+  }
+  if (item.href.startsWith("mailto:")) {
+    return (
+      <a href={item.href} className={className}>
+        {item.name}
+      </a>
+    );
+  }
+  return (
+    <Link href={item.href} className={className}>
+      {item.name}
+    </Link>
+  );
+}
+
+type NavItem = { name: string; href?: string };
+
+const navigation: Record<string, NavItem[]> = {
   product: [
-    { name: "Analyzer", href: "#demo" },
-    { name: "PDF Reports", href: "#" },
-    { name: "API", href: "#" },
-    { name: "Pricing", href: "#" },
+    { name: "Analyzer", href: "/#demo" },
+    { name: "Sample Report", href: "/reports" },
+    { name: "Property Score", href: "/#demo" },
+    { name: "Pricing", href: "/#pricing" },
   ],
   resources: [
-    { name: "Sample Report", href: "#" },
-    { name: "Blog", href: "#" },
-    { name: "Docs", href: "#" },
+    { name: "For Partners", href: "/#partners" },
+    { name: "Sample Reports", href: "/reports" },
   ],
   company: [
-    { name: "About", href: "#" },
-    { name: "Privacy", href: "#" },
-    { name: "Terms", href: "#" },
+    { name: "Privacy", href: "/privacy" },
+    { name: "Terms", href: "/terms" },
+    { name: "Contact", href: "mailto:rob@boostuppayments.com" },
   ],
 };
 
@@ -90,12 +112,7 @@ export function Footer() {
             <ul className="space-y-3">
               {navigation.product.map((item) => (
                 <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-sm text-cream/60 hover:text-cream transition-colors"
-                  >
-                    {item.name}
-                  </Link>
+                  <FooterLink item={item} />
                 </li>
               ))}
             </ul>
@@ -106,12 +123,7 @@ export function Footer() {
             <ul className="space-y-3">
               {navigation.resources.map((item) => (
                 <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-sm text-cream/60 hover:text-cream transition-colors"
-                  >
-                    {item.name}
-                  </Link>
+                  <FooterLink item={item} />
                 </li>
               ))}
             </ul>
@@ -122,12 +134,7 @@ export function Footer() {
             <ul className="space-y-3">
               {navigation.company.map((item) => (
                 <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-sm text-cream/60 hover:text-cream transition-colors"
-                  >
-                    {item.name}
-                  </Link>
+                  <FooterLink item={item} />
                 </li>
               ))}
             </ul>

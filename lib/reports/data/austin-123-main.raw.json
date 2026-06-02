@@ -1,0 +1,148 @@
+{
+  "address": "123 Main St, Austin TX 78701 (Downtown Austin)",
+  "price": "$725,000 (78701 condo median; address unverified — placeholder)",
+  "date": "May 09, 2026",
+  "overall_score": 54,
+  "property_details": {
+    "beds": "1 (modal 78701 sub-$1M unit; 2BR in some models — estimated)",
+    "baths": "1",
+    "sqft": "~750 (estimated; downtown avg unit 1,174 sqft per TOWERS index)",
+    "year_built": "2004–2019 (modal downtown tower vintage — estimated)",
+    "lot_size": "N/A — high-rise condo (no lot)",
+    "property_type": "High-rise condo / loft (ZIP 78701 ~95% multifamily)"
+  },
+  "categories": {
+    "Value & Comps": {"score": 62, "weight": "25%"},
+    "Income Potential": {"score": 38, "weight": "20%"},
+    "Neighborhood Quality": {"score": 78, "weight": "20%"},
+    "Investment Upside": {"score": 38, "weight": "20%"},
+    "Market Conditions": {"score": 48, "weight": "15%"}
+  },
+  "comps": [
+    {"address": "222 West Ave #1611 (Spring)", "price": "$599,000", "sqft": "689", "price_sqft": "$870", "sold_date": "Feb 2025", "distance": "Downtown 78701"},
+    {"address": "301 West Ave #4208 (Fifth + West)", "price": "$680,000", "sqft": "727", "price_sqft": "$935", "sold_date": "May 2026", "distance": "Downtown 78701"},
+    {"address": "501 West Ave #1406 (Fifth + West)", "price": "$469,000", "sqft": "~600 (est)", "price_sqft": "~$782", "sold_date": "Apr 2026", "distance": "Downtown 78701"},
+    {"address": "1812 West Ave #302 (West Avenue Lofts)", "price": "$535,000", "sqft": "~900 (est)", "price_sqft": "~$594", "sold_date": "May 2026", "distance": "Downtown 78701"},
+    {"address": "70 Rainey St #1408 (70 Rainey)", "price": "$1,399,999", "sqft": "1,434", "price_sqft": "$977", "sold_date": "Jun 2025", "distance": "Downtown 78701"},
+    {"address": "200 Congress Ave #12E (The Austonian)", "price": "$1,699,000", "sqft": "1,918", "price_sqft": "$887", "sold_date": "May 2025", "distance": "Downtown 78701"},
+    {"address": "40 N Interstate 35 #11D3 (Plaza Lofts area)", "price": "$589,000", "sqft": "1,533", "price_sqft": "$384", "sold_date": "Jan 2025", "distance": "Downtown 78701"}
+  ],
+  "comp_summary": {
+    "avg_price": "$852,857",
+    "avg_price_sqft": "$816/sq ft (mean excl. outliers; median ~$870)"
+  },
+  "cashflow": {
+    "items": [
+      {"item": "Gross Rental Income (mod, 1BR LTR)", "monthly": "$2,950", "annual": "$35,400"},
+      {"item": "Vacancy Loss (7%)", "monthly": "-$206", "annual": "-$2,478"},
+      {"item": "Effective Gross Income", "monthly": "$2,744", "annual": "$32,922"},
+      {"item": "Mortgage P&I (25% dn @ 7%)", "monthly": "-$3,617", "annual": "-$43,404"},
+      {"item": "Property Taxes (2.07% combined)", "monthly": "-$1,251", "annual": "-$15,015"},
+      {"item": "Insurance (HO-6 condo)", "monthly": "-$125", "annual": "-$1,500"},
+      {"item": "HOA", "monthly": "-$650", "annual": "-$7,800"},
+      {"item": "Maintenance (8%)", "monthly": "-$236", "annual": "-$2,832"},
+      {"item": "Property Mgmt (9%)", "monthly": "-$266", "annual": "-$3,186"},
+      {"item": "CapEx Reserve (5%)", "monthly": "-$148", "annual": "-$1,770"},
+      {"item": "Net Cash Flow", "monthly": "-$3,549", "annual": "-$42,587"}
+    ]
+  },
+  "investment_metrics": {
+    "cap_rate": "0.1%",
+    "cap_rate_status": "NOI $819 ÷ price $725,000. NOI = EGI $32,922 − operating expenses $32,103 (incl. HOA $7,800). HOA + tax load erases yield.",
+    "cash_on_cash": "-23.5%",
+    "coc_status": "Annual pre-tax cash flow −$42,585 ÷ down payment $181,250. Deeply negative on a leveraged long-term rental.",
+    "grm": "20.5x",
+    "grm_status": "Price $725,000 ÷ gross annual rent $35,400. Very high — an appreciation play, not income.",
+    "dscr": "0.02",
+    "dscr_status": "NOI $819 ÷ annual debt service $43,404. Essentially zero coverage — uninsurable as a DSCR loan.",
+    "one_pct": "0.41%",
+    "one_pct_status": "Rent $2,950 ÷ price $725,000 = 0.41% (target ≥1%). Would need ~$7,250/mo to pass.",
+    "breakeven": "$6,499/mo",
+    "breakeven_status": "Break-even rent ~$6,499/mo — more than 2× achievable LTR rent; cannot break even at full occupancy."
+  },
+  "mortgage": {
+    "purchase_price": "$725,000",
+    "down_payment": "$181,250 (25%)",
+    "loan_amount": "$543,750",
+    "rate": "7.00%",
+    "term": "30-year fixed",
+    "monthly_pi": "$3,617",
+    "monthly_piti": "$5,643 (P&I + tax + ins + HOA)"
+  },
+  "neighborhood": {
+    "scores": {
+      "School Rating": 55,
+      "Safety / Crime": 70,
+      "Walkability": 92,
+      "Transit Access": 75,
+      "Dining & Shopping": 95,
+      "Growth Trajectory": 75
+    },
+    "details": [
+      {"factor": "School District", "detail": "Austin ISD — Mathews ES 8/10, Austin HS 7/10 (A-)", "notes": "No in-ZIP elementary (Pease closed 2020); zoned cross-river to 78703"},
+      {"factor": "Crime Rate", "detail": "AreaVibes B+; ~1,484 total crime/100k (est)", "notes": "Resident stats good; property crime + nightlife corridor exposure higher"},
+      {"factor": "Walk Score", "detail": "92 — Walker's Paradise (most walkable ZIP in Austin)", "notes": "Transit ~75, Bike ~85 (downtown-core estimates)"},
+      {"factor": "Median Income", "detail": "$162,168 (some sources $148K)", "notes": ">70% bachelor's+; male-skewed young-professional core"},
+      {"factor": "Pop. Growth (5yr)", "detail": "Metro +65K residents/yr; ZIP driven by new tower deliveries", "notes": "12% city housing-stock growth 2023-24 — condo oversupply risk"},
+      {"factor": "Median Home Value", "detail": "$722,400", "notes": "ZIP median sold $746,956 TTM; +1.5% YoY downtown vs -6.5% broader Austin condos"}
+    ],
+    "demographics": {
+      "population_growth": "Metro +65,000 residents/year post-COVID; ZIP growth from new condo/rental towers",
+      "median_age": "37.2 years",
+      "employment_rate": "Strong — Google, Meta, Oracle (HQ), Indeed (HQ), state government downtown",
+      "major_employers": "Google (Block 185), Meta, TikTok, Cloudflare, PayPal, Indeed HQ, Oracle HQ, Texas state government"
+    }
+  },
+  "strategies": [
+    {"strategy": "Buy & Hold (Rental)", "projected_return": "Negative -$34K/yr Y1; -13% to +5.2% 5yr IRR", "timeframe": "7–10 year hold required",
+     "pros": "Strong rental demand (Walk 92, +11% YoY 1BR rent), appreciation recovery thesis, depreciation tax shield",
+     "risk": "~$168K cumulative cash bleed over 5 years; only viable with high reserves or deep negotiation (15-20% under list)"},
+    {"strategy": "BRRRR", "projected_return": "Not viable (Score 12/100)", "timeframe": "N/A",
+     "pros": "None meaningful — only a deeply distressed unit + motivated seller creates spread",
+     "risk": "No forced-appreciation lever (HOA controls exterior); all-in > ARV; ~$192K capital trapped"},
+    {"strategy": "Fix & Flip", "projected_return": "~$85K LOSS; ROI -25.4% (Score 22/100)", "timeframe": "6–9 months",
+     "pros": "None in current buyer's market",
+     "risk": "108-day DOM, prices -6.3% YoY, no forced-appreciation lever; $6,133/mo carrying cost"}
+  ],
+  "appreciation_projections": [
+    {"year": "Year 1", "conservative": "$717,750", "moderate": "$725,000", "aggressive": "$732,250"},
+    {"year": "Year 3", "conservative": "$725,000", "moderate": "$761,000", "aggressive": "$790,000"},
+    {"year": "Year 5", "conservative": "$760,000", "moderate": "$812,000", "aggressive": "$894,000"},
+    {"year": "Year 10", "conservative": "$815,000 (est)", "moderate": "$945,000 (est)", "aggressive": "$1,095,000 (est)"}
+  ],
+  "scenarios": [
+    {"scenario": "Bull Case", "probability": "20%", "return": "~+5.2% IRR / +$53K (5yr)",
+     "trigger": "Rates fall to 5.5%; downtown premium holds; tech employment reaccelerates; 5% annual appreciation"},
+    {"scenario": "Base Case", "probability": "50%", "return": "+12% to +18% cumulative (5yr); negative cash flow",
+     "trigger": "Flat-to-negative 2026, recovery 2027+ at 2-4%, returning to 3-5% by 2028-2030"},
+    {"scenario": "Bear Case", "probability": "30%", "return": "~-13% IRR / -$108K (5yr)",
+     "trigger": "Another 10-15% downtown condo decline from oversupply; tech layoffs; rates stay 7%+"}
+  ],
+  "recommendation": {
+    "signal": "HOLD / VERIFY",
+    "summary": "Mixed signals with a critical caveat: '123 Main St, 78701' is not a verifiable downtown Austin address (the downtown grid uses Congress/Brazos/Colorado/Lavaca/Guadalupe, not 'Main') — verify against TCAD before any binding action. Analysis runs against the modal 78701 downtown 1BR/1BA tower-condo profile at ~$725K. The neighborhood is elite (Walk Score 92, $162K median income, Google/Oracle/Meta employer base) and comps support a ~$650K mid-FMV for a 1BR, but the deal math is brutal as a leveraged investment: HOA ($600-1,200/mo) plus 2.07% property tax plus 7% rates means every LTR scenario bleeds ~$3,200-$3,800/month. Best fit is an appreciation-focused buyer with deep cash reserves and a 7-10 year hold, or a hard negotiator buying 15-20% under list. STR upside is largely dead post-July-2026 platform enforcement and HOA bans. Market is a deep buyer's market (127-day DOM, ~8.7-month supply, condos selling 4-4.3% under list).",
+    "suggested_offer": "Appreciation buyer w/ reserves: ≤$620K (1BR). Investor for cash flow: offer 15-20% under list ($560-595K) or walk.",
+    "action_items": [
+      "Verify the actual parcel against Travis Central Appraisal District (TCAD) — '123 Main St' may be a placeholder or typo",
+      "Order MLS comps from an ABoR member; pull exact unit sqft, floor, view, parking",
+      "Obtain the HOA resale certificate / CC&Rs — confirm monthly fee, reserve study, special-assessment risk, and STR/rental policy",
+      "Confirm 2026 new-supply tower pipeline within 0.5 mi (The Modern, The Linden) — oversupply pressure",
+      "Stress-test underwriting at -10% rent + 3-month vacancy; target a building with HOA under $700/mo",
+      "If acting: negotiate 15-20% under list and plan a 7-10 year hold; treat any STR income as bonus, not base case"
+    ]
+  },
+  "risk_factors": [
+    {"factor": "Address Verification", "probability": "High", "impact": "High",
+     "notes": "'123 Main St, 78701' does not match the downtown Austin street grid; risk of placeholder/typo/off-grid parcel. Verify TCAD before any capital commitment."},
+    {"factor": "Negative Cash Flow Sustainability", "probability": "High", "impact": "High",
+     "notes": "$42K-$50K annual LTR cash burn; HOA + 2.07% tax + 7% rate. Single vacancy + special assessment compounds losses."},
+    {"factor": "Downtown Condo Oversupply / Correction", "probability": "Medium-High", "impact": "High",
+     "notes": "12% housing-stock surge, ~8.7-month supply, 127-day DOM, condos -6.5% YoY broadly. Another 10-15% decline puts owner $80-105K underwater."},
+    {"factor": "STR Regulatory & HOA Restriction", "probability": "Medium-High", "impact": "Medium-High",
+     "notes": "July 1, 2026 platform display rule scrubs unlicensed listings; many downtown HOAs ban <30-night stays; 3% per-building STR cap. STR upside largely gone."},
+    {"factor": "Interest Rate Risk", "probability": "Medium", "impact": "High",
+     "notes": "Investor rates 7.0-7.6%; drop to 5.5% shifts to break-even, hikes deepen losses and kill refi optionality."},
+    {"factor": "HOA Special Assessment", "probability": "Medium", "impact": "Medium-High",
+     "notes": "Aging downtown towers face $20-50K assessments for facade/elevators/mechanicals; obtain reserve study before buying."}
+  ]
+}

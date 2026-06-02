@@ -1,7 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import {
+  ArrowRight,
   TrendingUp,
   DollarSign,
   BarChart3,
@@ -171,8 +173,12 @@ export function UseCases() {
           className="text-center space-y-4 mb-12"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-cream text-balance">
-            Built for Every Real Estate Professional
+            For buyers, sellers &amp; the pros who serve them
           </h2>
+          <p className="mx-auto max-w-2xl text-lg text-cream/60">
+            One engine, five lenses. Pick your seat — every mode ends in the same defensible,
+            client-ready report.
+          </p>
         </motion.div>
 
         {/* Tabs */}
@@ -214,6 +220,15 @@ export function UseCases() {
             ))}
           </Tabs>
         </motion.div>
+
+        <div className="mt-12 text-center">
+          <Link
+            href="/reports"
+            className="inline-flex items-center gap-2 rounded-lg border border-gold/40 bg-gold/10 px-6 py-3 text-sm font-semibold text-gold transition hover:bg-gold/20"
+          >
+            See a real report for your use case <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
       </div>
     </section>
   );

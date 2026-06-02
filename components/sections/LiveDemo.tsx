@@ -1,9 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { MapPin, Search } from "lucide-react";
 import { toast } from "sonner";
+import { captureLead } from "@/components/EmailGate";
 import { BackgroundBeams } from "@/components/aceternity/background-beams";
 import { BorderBeam } from "@/components/magicui/border-beam";
 import { NumberTicker } from "@/components/magicui/number-ticker";
@@ -38,12 +40,28 @@ const demoData = {
   ],
 };
 
+const FLAGSHIP_SLUG = "583-sentinel-rd-moorestown-nj";
+
 export function LiveDemo() {
+  const router = useRouter();
   const [address, setAddress] = useState("");
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [showResults, setShowResults] = useState(false);
   const [emailDialogOpen, setEmailDialogOpen] = useState(false);
   const [email, setEmail] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+  // Partner-deployment hooks: ?address= pre-fills (QR on yard signs / deep links),
+  // ?ref= tags the lead with the partner for attribution. Read from window to avoid
+  // a Suspense boundary / client-render deopt on the whole homepage.
+  const [partnerRef, setPartnerRef] = useState<string | null>(null);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const ref = params.get("ref");
+    if (ref) setPartnerRef(ref);
+    const a = params.get("address");
+    if (a) setAddress(a);
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -65,15 +83,25 @@ export function LiveDemo() {
     }, 2000);
   };
 
-  const handleEmailSubmit = (e: React.FormEvent) => {
+  const handleEmailSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email.trim()) {
-      toast.error("Please enter your email");
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
+      toast.error("Please enter a valid email");
       return;
     }
-    toast.success("Check your inbox! Your PDF report is on the way.");
+    setSubmitting(true);
+    await captureLead({
+      email: email.trim(),
+      source: partnerRef ? `live-demo:ref=${partnerRef}` : "live-demo",
+      address: address || demoData.address,
+      reportSlug: FLAGSHIP_SLUG,
+      ref: partnerRef ?? undefined,
+    });
+    toast.success("Unlocked! Opening your full report…");
     setEmailDialogOpen(false);
     setEmail("");
+    setSubmitting(false);
+    router.push(`/reports/${FLAGSHIP_SLUG}`);
   };
 
   return (
@@ -243,7 +271,7 @@ export function LiveDemo() {
                       shimmerColor="#c9982e"
                       className="flex-1 text-cream"
                     >
-                      Email Me the Full PDF Report
+                      Unlock the Full Report
                     </ShimmerButton>
                     <Button
                       variant="ghost"
@@ -267,9 +295,10 @@ export function LiveDemo() {
       <Dialog open={emailDialogOpen} onOpenChange={setEmailDialogOpen}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
-            <DialogTitle>Get Your Full Report</DialogTitle>
+            <DialogTitle>See your full report — right here</DialogTitle>
             <DialogDescription>
-              {`We'll send a detailed 6-page PDF analysis to your inbox.`}
+              Enter your email and we&apos;ll open the complete, multi-page analysis on the next
+              screen. No inbox hunting — it stays on the site, yours to read and download.
             </DialogDescription>
           </DialogHeader>
           <form onSubmit={handleEmailSubmit} className="space-y-4">
@@ -283,8 +312,8 @@ export function LiveDemo() {
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
-            <Button type="submit" variant="gold" className="w-full">
-              Send My Report
+            <Button type="submit" variant="gold" className="w-full" disabled={submitting}>
+              {submitting ? "Unlocking…" : "Open My Full Report"}
             </Button>
           </form>
         </DialogContent>

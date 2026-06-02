@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
@@ -77,9 +78,12 @@ export function Hero() {
 
             {/* Subheadline */}
             <p className="text-lg lg:text-xl text-cream/60 max-w-lg text-pretty">
-              5 AI agents analyze any US property in 60 seconds. Comps, rental
-              cash flow, BRRRR model, flip ROI, neighborhood score — plus a
-              6-page PDF you can hand to your buyer or contractor.
+              5 AI agents analyze any US property in 60 seconds. Whether you&apos;re
+              <span className="text-cream/90"> buying</span>,
+              <span className="text-cream/90"> selling</span>, or
+              <span className="text-cream/90"> investing</span> — get comps, rental cash
+              flow, BRRRR &amp; flip math, neighborhood score, and a report you can hand to
+              your client or lender.
             </p>
 
             {/* CTA row */}
@@ -91,13 +95,15 @@ export function Hero() {
               >
                 Score My Property
               </MovingBorderButton>
-              <ShimmerButton
-                shimmerColor="#c9982e"
-                background="rgba(45, 138, 78, 0.1)"
-                className="text-cream/90 hover:text-cream"
-              >
-                See Sample Report
-              </ShimmerButton>
+              <Link href="/reports">
+                <ShimmerButton
+                  shimmerColor="#c9982e"
+                  background="rgba(45, 138, 78, 0.1)"
+                  className="text-cream/90 hover:text-cream"
+                >
+                  See Sample Reports
+                </ShimmerButton>
+              </Link>
             </div>
 
             {/* Trust line */}

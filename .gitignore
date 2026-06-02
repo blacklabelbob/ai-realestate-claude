@@ -35,3 +35,20 @@ env/
 # Misc
 *.log
 .cache/
+.env.local
+.leads/
+
+# Node / Next.js (were missing — repo started as a Python skill)
+/node_modules
+/.next/
+/out/
+/build
+.vercel
+*.tsbuildinfo
+next-env.d.ts
+
+# Internal / proprietary — keep OUT of the public repo
+/internal/
+SOL.md
+content/BUSINESS-CASE-GTM.md
+**/DATA-PROVENANCE.md

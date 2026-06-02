@@ -1,9 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { HeroParallax } from "@/components/aceternity/hero-parallax";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
-import { FileText } from "lucide-react";
+import { FileText, ArrowRight } from "lucide-react";
 
 const pdfPages = [
   {
@@ -63,15 +64,23 @@ export function PdfPreview() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <ShimmerButton
-            shimmerColor="#c9982e"
-            className="text-cream inline-flex items-center gap-2"
+          <a href="/reports/583-sentinel-rd-moorestown.pdf" download>
+            <ShimmerButton
+              shimmerColor="#c9982e"
+              className="text-cream inline-flex items-center gap-2"
+            >
+              <FileText className="h-5 w-5" />
+              Download Sample Report (PDF)
+            </ShimmerButton>
+          </a>
+          <Link
+            href="/reports"
+            className="inline-flex items-center gap-2 text-cream/80 transition hover:text-cream"
           >
-            <FileText className="h-5 w-5" />
-            Download Sample Report (PDF)
-          </ShimmerButton>
+            View all sample reports <ArrowRight className="h-4 w-4" />
+          </Link>
         </motion.div>
       </div>
     </section>
