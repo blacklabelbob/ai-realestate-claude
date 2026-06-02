@@ -19,15 +19,16 @@ interface PropertySatelliteProps {
   className?: string;
 }
 
-const KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+// Premium tier routed through our server-side proxy so the key stays secret.
+const MAPS_ENABLED = process.env.NEXT_PUBLIC_MAPS_ENABLED === "true";
 
-// --- Premium tier: Google Static Maps hybrid (satellite + labels), needs a key ---
+// --- Premium tier: Google Static Maps hybrid (satellite + labels), via /api/staticmap ---
 function googleUrl(address: string) {
   const q = encodeURIComponent(address);
   return (
-    `https://maps.googleapis.com/maps/api/staticmap?center=${q}` +
+    `/api/staticmap?center=${q}` +
     `&zoom=19&size=640x340&scale=2&maptype=hybrid` +
-    `&markers=color:0xc9982e%7C${q}&key=${KEY}`
+    `&markers=color:0xc9982e%7C${q}`
   );
 }
 
@@ -86,12 +87,12 @@ export function PropertySatellite({
   const [imgErrored, setImgErrored] = useState(false);
   const [coords, setCoords] = useState<{ lat: number; lng: number } | null>(prebaked ?? null);
   const [geo, setGeo] = useState<"idle" | "loading" | "ok" | "fail">(
-    KEY ? "idle" : prebaked ? "ok" : "loading",
+    MAPS_ENABLED ? "idle" : prebaked ? "ok" : "loading",
   );
 
-  // No Google key AND no pre-baked coords → geocode for free via OSM Nominatim.
+  // No Google proxy AND no pre-baked coords → geocode for free via OSM Nominatim.
   useEffect(() => {
-    if (KEY || prebaked) return;
+    if (MAPS_ENABLED || prebaked) return;
     let cancelled = false;
     (async () => {
       try {
@@ -117,8 +118,8 @@ export function PropertySatellite({
   }, [address]);
 
   const h = compact ? 168 : height;
-  const showGoogle = Boolean(KEY) && !imgErrored;
-  const showEsri = !KEY && geo === "ok" && coords && !imgErrored;
+  const showGoogle = MAPS_ENABLED && !imgErrored;
+  const showEsri = !MAPS_ENABLED && geo === "ok" && coords && !imgErrored;
   const isLive = showGoogle || showEsri;
 
   return (

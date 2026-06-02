@@ -13,7 +13,7 @@ interface CompsMapProps {
   verified?: boolean;
 }
 
-const KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+const MAPS_ENABLED = process.env.NEXT_PUBLIC_MAPS_ENABLED === "true";
 
 // Comps often store a short street ("596 Sentinel Rd"); append city/state so the
 // Static Maps geocoder can resolve each marker.
@@ -30,11 +30,8 @@ function staticMapUrl(subject: string, comps: Comp[], city: string, state: strin
         `markers=color:0x1a2332%7Clabel:${i + 1}%7C${encodeURIComponent(qualify(c.address, city, state))}`,
     )
     .join("&");
-  // No center/zoom → Static Maps auto-fits all markers.
-  return (
-    `https://maps.googleapis.com/maps/api/staticmap?size=640x360&scale=2&maptype=roadmap&` +
-    `${subjMarker}&${compMarkers}&key=${KEY}`
-  );
+  // No center/zoom → Static Maps auto-fits all markers. Routed via the secret-key proxy.
+  return `/api/staticmap?size=640x360&scale=2&maptype=roadmap&${subjMarker}&${compMarkers}`;
 }
 
 // Deterministic scatter for the no-key schematic (index-based, stable across renders).
@@ -81,7 +78,7 @@ function SchematicComps({ comps }: { comps: Comp[] }) {
 
 export function CompsMap({ subjectAddress, subjectLabel, comps, city, state, verified }: CompsMapProps) {
   const [errored, setErrored] = useState(false);
-  const showImage = Boolean(KEY) && !errored && comps.length > 0;
+  const showImage = MAPS_ENABLED && !errored && comps.length > 0;
 
   return (
     <figure className="overflow-hidden rounded-2xl border border-navy/10 bg-white shadow-sm">
