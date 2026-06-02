@@ -19,11 +19,11 @@
     "Market Conditions": {"score": 72, "weight": "15%"}
   },
   "comps": [
-    {"address": "596 Sentinel Rd", "price": "$999,999", "sqft": "2,710", "price_sqft": "$369", "sold_date": "May 2025", "distance": "0.05 mi"},
-    {"address": "558 Sentinel Rd", "price": "$915,000", "sqft": "3,602", "price_sqft": "$254", "sold_date": "Jan 2025", "distance": "0.1 mi"},
-    {"address": "7 Sycamore Ln", "price": "$1,126,000", "sqft": "3,200", "price_sqft": "$352", "sold_date": "Jul 2025", "distance": "0.4 mi"},
-    {"address": "25 Oriole Way", "price": "$650,000", "sqft": "2,460", "price_sqft": "$264", "sold_date": "Dec 2025", "distance": "0.5 mi"},
-    {"address": "102 Lois Ln", "price": "$600,000", "sqft": "1,920", "price_sqft": "$312", "sold_date": "Feb 2025", "distance": "0.6 mi"}
+    {"address": "596 Sentinel Rd", "price": "$999,999", "sqft": "2,710", "price_sqft": "$369", "sold_date": "May 2025", "distance": "0.05 mi", "lat": 39.98426, "lng": -74.93228},
+    {"address": "558 Sentinel Rd", "price": "$915,000", "sqft": "3,602", "price_sqft": "$254", "sold_date": "Jan 2025", "distance": "0.1 mi", "lat": 39.98644, "lng": -74.93555},
+    {"address": "7 Sycamore Ln", "price": "$1,126,000", "sqft": "3,200", "price_sqft": "$352", "sold_date": "Jul 2025", "distance": "0.4 mi", "lat": 39.98432, "lng": -74.91732},
+    {"address": "25 Oriole Way", "price": "$650,000", "sqft": "2,460", "price_sqft": "$264", "sold_date": "Dec 2025", "distance": "0.5 mi", "lat": 39.98023, "lng": -74.96966},
+    {"address": "102 Lois Ln", "price": "$600,000", "sqft": "1,920", "price_sqft": "$312", "sold_date": "Feb 2025", "distance": "0.6 mi", "lat": 39.94783, "lng": -74.96213}
   ],
   "comp_summary": {
     "avg_price": "$858,200",

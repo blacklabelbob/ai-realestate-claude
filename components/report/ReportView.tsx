@@ -376,6 +376,7 @@ export function ReportView({ report }: { report: Report }) {
             city={report.city}
             state={report.state}
             verified={report.verified}
+            subjectCoords={report.coords}
           />
         </div>
         <div className="report-card overflow-hidden rounded-2xl">

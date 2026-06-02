@@ -17,6 +17,8 @@ export interface Comp {
   price_sqft: string;
   sold_date: string;
   distance: string;
+  lat?: number; // pre-geocoded — exact pin, no mis-geocode
+  lng?: number;
 }
 
 export interface CashflowItem {
