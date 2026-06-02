@@ -18,7 +18,6 @@ import {
   RadialBarChart,
   RadialBar,
   ResponsiveContainer,
-  Legend,
 } from "recharts";
 
 const scoreData = [
@@ -135,13 +134,6 @@ export function ScoreBreakdown() {
                   background
                   dataKey="value"
                   cornerRadius={10}
-                />
-                <Legend
-                  iconSize={10}
-                  layout="vertical"
-                  verticalAlign="middle"
-                  align="right"
-                  wrapperStyle={{ fontSize: "12px" }}
                 />
               </RadialBarChart>
             </ResponsiveContainer>

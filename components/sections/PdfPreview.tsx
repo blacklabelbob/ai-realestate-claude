@@ -8,28 +8,34 @@ import { FileText, ArrowRight } from "lucide-react";
 
 const pdfPages = [
   {
-    title: "Cover + Score",
+    title: "Cover & Property Score",
     gradient: "bg-gradient-to-br from-navy via-[#2a3545] to-forest",
+    image: "/report-previews/cover.webp",
   },
   {
-    title: "Comparable Sales Map",
+    title: "Comparable Sales + Map",
     gradient: "bg-gradient-to-br from-forest via-[#3a7a5e] to-gold/50",
+    image: "/report-previews/comps.webp",
   },
   {
-    title: "Rental Cash Flow",
+    title: "Rental Cash-Flow Model",
     gradient: "bg-gradient-to-br from-gold/80 via-[#a88a3a] to-navy",
+    image: "/report-previews/cashflow.webp",
   },
   {
-    title: "Neighborhood Analysis",
+    title: "Neighborhood Intelligence",
     gradient: "bg-gradient-to-br from-[#4a6fa5] via-navy to-forest",
+    image: "/report-previews/neighborhood.webp",
   },
   {
-    title: "BRRRR / Flip Model",
+    title: "Market Evidence — Sourced",
     gradient: "bg-gradient-to-br from-forest via-[#5a9a6e] to-gold/60",
+    image: "/report-previews/market.webp",
   },
   {
-    title: "Mortgage Calculator",
+    title: "5-Agent Score Breakdown",
     gradient: "bg-gradient-to-br from-navy via-[#1a2332] to-[#4a6fa5]",
+    image: "/report-previews/score.webp",
   },
 ];
 

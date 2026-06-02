@@ -1,16 +1,17 @@
 "use client";
 
 import React, { useRef } from "react";
+import Image from "next/image";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 
-export const HeroParallax = ({
-  products,
-}: {
-  products: {
-    title: string;
-    gradient: string;
-  }[];
-}) => {
+export type ParallaxProduct = {
+  title: string;
+  gradient: string;
+  /** Optional real screenshot of the report section shown in the card. */
+  image?: string;
+};
+
+export const HeroParallax = ({ products }: { products: ParallaxProduct[] }) => {
   const firstRow = products.slice(0, 3);
   const secondRow = products.slice(3, 6);
   const ref = useRef(null);
@@ -87,10 +88,7 @@ export const ProductCard = ({
   product,
   translate,
 }: {
-  product: {
-    title: string;
-    gradient: string;
-  };
+  product: ParallaxProduct;
   translate: ReturnType<typeof useSpring>;
 }) => {
   return (
@@ -102,16 +100,31 @@ export const ProductCard = ({
         y: -20,
       }}
       key={product.title}
-      className="group/product h-72 w-[25rem] relative flex-shrink-0 rounded-xl overflow-hidden"
+      className="group/product h-72 w-[25rem] relative flex-shrink-0 overflow-hidden rounded-xl border border-white/10 bg-slate-900 shadow-2xl ring-1 ring-black/40"
     >
-      <div
-        className={`absolute inset-0 ${product.gradient} flex items-center justify-center`}
-      >
-        <span className="text-white/80 font-semibold text-lg text-center px-4">
+      {/* Gradient fallback (shows behind/while the image loads) */}
+      <div className={`absolute inset-0 ${product.gradient}`} />
+
+      {product.image && (
+        <Image
+          src={product.image}
+          alt={`${product.title} — sample report section`}
+          fill
+          sizes="400px"
+          className="object-cover object-top transition-transform duration-500 group-hover/product:scale-[1.04]"
+        />
+      )}
+
+      {/* Bottom legibility scrim + label */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/85 via-black/35 to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 flex items-center justify-between gap-3 px-4 pb-3.5">
+        <span className="text-sm font-semibold tracking-tight text-white drop-shadow">
           {product.title}
         </span>
+        <span className="rounded-full border border-gold/40 bg-black/40 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider text-gold backdrop-blur-sm">
+          Live report
+        </span>
       </div>
-      <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black/40 pointer-events-none"></div>
     </motion.div>
   );
 };
