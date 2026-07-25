@@ -70,7 +70,7 @@ const plans = [
       "Custom API limits",
     ],
     cta: "Contact Sales",
-    href: "mailto:rob@boostuppayments.com?subject=AI%20Real%20Estate%20Analyst%20—%20Partner%20inquiry",
+    href: "mailto:rob@aivoicetech.io?subject=AI%20Real%20Estate%20Analyst%20—%20Partner%20inquiry",
     variant: "ghost" as const,
   },
 ];

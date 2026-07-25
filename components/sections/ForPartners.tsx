@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 
 const PARTNER_MAILTO =
-  "mailto:rob@boostuppayments.com?subject=AI%20Real%20Estate%20Analyst%20—%20Partner%20inquiry";
+  "mailto:rob@aivoicetech.io?subject=AI%20Real%20Estate%20Analyst%20—%20Partner%20inquiry";
 
 const partnerCards = [
   {

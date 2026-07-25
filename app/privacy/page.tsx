@@ -128,10 +128,10 @@ export default function PrivacyPage() {
             <p>
               Questions about this policy? Email us at{" "}
               <a
-                href="mailto:rob@boostuppayments.com"
+                href="mailto:rob@aivoicetech.io"
                 className="text-gold underline decoration-dotted underline-offset-2 hover:text-gold/80"
               >
-                rob@boostuppayments.com
+                rob@aivoicetech.io
               </a>
               .
             </p>

@@ -41,7 +41,7 @@ const navigation: Record<string, NavItem[]> = {
   company: [
     { name: "Privacy", href: "/privacy" },
     { name: "Terms", href: "/terms" },
-    { name: "Contact", href: "mailto:rob@boostuppayments.com" },
+    { name: "Contact", href: "mailto:rob@aivoicetech.io" },
   ],
 };
 
